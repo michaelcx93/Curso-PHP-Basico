@@ -4,7 +4,7 @@ session_start();
 if ($_POST) {
     if (($_POST['user'] == "michael") && ($_POST['password'] == "12345")) {
 
-        $_SESSION['usuario']="michael";
+        $_SESSION['user']="michael";
 
         header("location:index.php");
 
