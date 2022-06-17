@@ -21,6 +21,7 @@ if ( isset($_SESSION['user'])!="michael"){
     <div class="container">
 
         <a href="index.php"> Inicio</a> |
+        <a href="index2.php"> Conoce más</a> |
         <a href="portafolio.php"> Portafolio</a> |
         <a href="cerrar.php"> Cerrar</a>
 
