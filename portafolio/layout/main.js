@@ -62,6 +62,21 @@ class DataTable{
         this.copyItems.makeTable();
     }
 
+    makeTable(){
+        this.copyItems = [...this.items];
+
+        this.initPagination();
+    }
+
+    initPagination(total, entries){
+        this.pagination.total = total;
+        this.pagination.noItemsPerPage = entries;
+        this.pagination.noPages = Math.ceil(this.pagination.total / this.pagination.noItemsPerPage);
+        this.pagination.actual = 1;
+        this.pagination.pointer = 0;
+        this.pagination.diff = this.pagination.noItemsPerPage - (this.pagination.total % this.pagination.noItemsPerPage);
+    }
+
     generateUUID(){
         return (Date.now() * Math.floor(Math.random() * 100000)).toString();
     }
